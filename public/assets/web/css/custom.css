@@ -1,0 +1,160 @@
+/** Custom Select **/
+
+.custom-select-box .custom-select{
+    background: #156eb6 !important;
+    color: #fff;
+    padding: .125rem .5rem;
+    height: 30px;
+}
+.custom-select-wrapper {
+    position: relative;
+    display: inline-block;
+    user-select: none;
+  }
+    .custom-select-wrapper select {
+      display: none;
+    }
+    .custom-select {
+      position: relative;
+      display: inline-block;
+      z-index: 1080;
+    }
+      .custom-select-trigger {
+        position: relative;
+        display: block;
+        /* width: 130px; */
+        padding: 0 37px 0 0px;
+        font-size: 14px;
+        border-radius: 4px;
+        cursor: pointer;
+        text-wrap: nowrap;
+      }
+        .custom-select-trigger:after {
+          position: absolute;
+          display: block;
+          content: '';
+          width: 10px; height: 10px;
+          top: 50%; right: 0px;
+          margin-top: -3px;
+          border-bottom: 1px solid #fff;
+          border-right: 1px solid #fff;
+          transform: rotate(45deg) translateY(-50%);
+          transition: all .4s ease-in-out;
+          transform-origin: 50% 0;
+        }
+        .custom-select.opened .custom-select-trigger:after {
+          margin-top: 3px;
+          transform: rotate(-135deg) translateY(-50%);
+        }
+    .custom-options {
+      position: absolute;
+      display: block;
+      top: 100%; left: 0; right: 0;
+      min-width: 100%;
+      margin: 15px 0;
+      border: 1px solid #b5b5b5;
+      border-radius: 4px;
+      box-sizing: border-box;
+      box-shadow: 0 2px 1px rgba(0,0,0,.07);
+      background: #fff;
+      transition: all .4s ease-in-out;
+      
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transform: translateY(-15px);
+    }
+    .custom-select.opened .custom-options {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: all;
+      transform: translateY(0);
+    }
+      .custom-options:before {
+        position: absolute;
+        display: block;
+        content: '';
+        bottom: 100%; right: 25px;
+        width: 7px; height: 7px;
+        margin-bottom: -4px;
+        border-top: 1px solid #b5b5b5;
+        border-left: 1px solid #b5b5b5;
+        background: #fff;
+        transform: rotate(45deg);
+        transition: all .4s ease-in-out;
+      }
+      .option-hover:before {
+        background: #f9f9f9;
+      }
+      .activeFilter-option,.redeemFilter-option {
+        position: relative;
+        display: block;
+        padding: 0 11px;
+        font-size: 14px;
+        color: #12263f;
+        line-height: 37px;
+        cursor: pointer;
+        transition: all .4s ease-in-out;
+      }
+      .activeFilter-option:first-of-type,.redeemFilter-option:first-of-type {
+        border-radius: 4px 4px 0 0;
+      }
+      .activeFilter-option:last-of-type,.redeemFilter-option:last-of-type {
+        border-bottom: 0;
+        border-radius: 0 0 4px 4px;
+      }
+      .activeFilter-option:hover,
+      .redeemFilter-option:hover,
+      .activeFilter-option.selection,
+      .redeemFilter-option.selection {
+        background: #e1ebf2;
+      }
+      .checkOff{
+        display: none;
+      }
+      .country_code{
+        border: 1px solid #ced4da !important;
+        font-size: 15px !important;
+        border-radius: 0.35rem !important;
+        margin-left: 0 !important;
+        padding: 0 !important; 
+      }
+
+      input[type=file] {
+        width: 300px;
+        max-width: 100%;
+        color: #444;
+        padding: 5px;
+        background: #fff;
+        border-radius: 8px;
+        border: 1px solid #555;
+      }
+      
+      input[type=file]::file-selector-button {
+        margin-right: 20px;
+        border: none;
+        background: #2c7be5;
+        padding: 10px 20px;
+        border-radius: 8px;
+        color: #fff;
+        cursor: pointer;
+        transition: background .2s ease-in-out;
+      }
+      
+      input[type=file]::file-selector-button:hover {
+        background: #2c7be5;
+      }
+      .cusom_img{
+        width:100% !important;
+      }
+
+      .sidebar .nav-item{
+        border-top: 1px solid #edf2f9 !important;
+      }
+      .cust_pagination{
+        margin-top: 15px;
+      }
+      .front-noti{
+        max-height: 300px;
+        overflow-y: scroll;
+      }
